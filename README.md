@@ -7,6 +7,7 @@ TODO:
 - Merge SQL notes into one streamlined edition and study guide
 - Add LaTex source code for the notes, either here or in the original repository
 - Add Pandas notes
+- Add the precompiled version of the site code
 
 
 
