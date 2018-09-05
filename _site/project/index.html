@@ -1,0 +1,353 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.10.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Project Guidelines - INFO-UB 23: Introduction to Programming and Data Science</title>
+<meta name="description" content="Summer 2018">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="INFO-UB 23: Introduction to Programming and Data Science">
+<meta property="og:title" content="Project Guidelines">
+<meta property="og:url" content="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/project/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/project/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "INFO-UB 23",
+      "url": "http://people.stern.nyu.edu/khoffman/intro_programming_datasci",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/feed.xml" type="application/atom+xml" rel="alternate" title="INFO-UB 23: Introduction to Programming and Data Science Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/">INFO-UB 23: Introduction to Programming and Data Science</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/syllabus" >Syllabus</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/schedule" >Schedule</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/project" >Project</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Project Guidelines">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Project Guidelines
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><br />
+<strong>The project reports will be due on Friday, August 10.</strong></p>
+
+<p>One of the key components of this class will be an independent project. This will allow you to practice using the tools we have learned in class, and gain some real-world experience working with data.</p>
+
+<p>The focus of the project will be on <em>retrieving, storing, querying, and analyzing data.</em> In particular, you will:</p>
+
+<ol>
+  <li>Identify a topic of interest.</li>
+  <li>Acquire relevant datasets.</li>
+  <li>Integrate these datasets into a database.</li>
+  <li>Summarize/analyze/query the datasets.</li>
+  <li>Produce charts/tables/visuals to illustrate your findings.</li>
+  <li>Present your work in written and oral form.</li>
+</ol>
+
+<p>You should aim to conduct <em>exploratory</em> data analysis, rather than building a statistical or predictive model. You can build a model if you have time at the end, but this is likely to be time consuming and is not the focus of our class.</p>
+
+<h2 id="data">Data</h2>
+<p>For this step, you will need to find an interesting source of data and collect the data that you need. You will want to create a database that can be used to store your data.  You are encouraged to create an ER diagram first and then translate the ER diagram into a set of tables in MySQL.</p>
+
+<p>Since the summer term is short, you should focus on acquiring data that is readily available and easy to work with; otherwise, you could run the risk of spending all of your time on data acquisition. 
+You can gather data by:</p>
+<ol>
+  <li>Scraping the web</li>
+  <li>Querying an API</li>
+  <li>Importing a CSV/Excel spreadsheet</li>
+</ol>
+
+<p>A list of possible data sources includes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Sample Data Sources</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Misc</td>
+      <td><a href="https://www.zillow.com/howto/api/APIOverview.htm">Zillow</a> <br /> <a href="https://www.yelp.com/fusion">Yelp</a> <br /> <a href="https://msropendata.com/">MSR Open Data</a></td>
+    </tr>
+    <tr>
+      <td>Movement</td>
+      <td><a href="https://developers.google.com/maps/documentation/">Google Maps</a> <br /> <a href="http://www.citibikenyc.com/system-data">Citibike data</a></td>
+    </tr>
+    <tr>
+      <td>Music</td>
+      <td><a href="https://www.last.fm/api">LastFM</a> <br /> <a href="https://developer.spotify.com/web-api/endpoint-reference/">Spotify Metadata API</a></td>
+    </tr>
+    <tr>
+      <td>Social media</td>
+      <td><a href="https://apps.twitter.com/">Twitter APIs</a> <br /> <a href="https://developers.facebook.com/tools/explorer/">Facebook API</a></td>
+    </tr>
+    <tr>
+      <td>News</td>
+      <td><a href="https://developer.nytimes.com/">NYTimes APIs</a></td>
+    </tr>
+    <tr>
+      <td>Politics and Government</td>
+      <td><a href="https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-information">World Bank APIs</a>  <br /> <a href="https://sunlightfoundation.com/api/">Sunlight Foundation</a>  <br />  <a href="https://nycopendata.socrata.com/">New York City Open Data</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can search a large range of APIs at:</p>
+<ul>
+  <li><a href="https://www.programmableweb.com/apis/directory">ProgrammeableWeb</a></li>
+  <li><a href="https://github.com/toddmotto/public-apis">public-apis GitHub repository</a></li>
+  <li><a href="https://www.opendatanetwork.com/">Open Data Network</a></li>
+</ul>
+
+<p>You can find more resources in our <a href="https://github.com/khof312/Summer2018_ProfHoffmannPham/blob/master/DATA_SOURCES.md">GitHub repository</a>.</p>
+
+<h2 id="analysis">Analysis</h2>
+
+<p>Load the data in the database and run at least 3 “interesting” SQL queries (including queries with joins and/or group by).
+Analyze the results of these queries (e.g., by retrieving the data from SQL using Python and visualizing the results using Pandas, or by doing a statistical analysis). Present at least 3 plots and/or tables. Describe the insights that you learned from this data analysis.</p>
+
+<p>You can look for inspiration on the following sites. The analyses are generally much more sophisticated than what I expect for the final projects (i.e. many are produced by professional journalists), but you might get some ideas:</p>
+
+<ul>
+  <li><a href="http://flowingdata.com/">Flowing Data</a></li>
+  <li><a href="https://public.tableau.com/en-us/s/gallery">Tableau Public Gallery</a></li>
+  <li><a href="https://www.theguardian.com/news/datablog+technology/data-visualisation">The Guardian Datablog</a></li>
+  <li><a href="https://www.informationisbeautifulawards.com/showcase?award=2017&amp;pcategory=winner&amp;type=awards">Kantar Information Is Beautiful Awards</a></li>
+  <li><a href="https://twitter.com/nytgraphics?">New York Times Graphics</a></li>
+  <li><a href="http://toddwschneider.com/archives/">Todd Schneider’s Blog</a></li>
+  <li><a href="https://fivethirtyeight.com/">FiveThirtyEight</a></li>
+</ul>
+
+<h2 id="deliverable">Deliverable</h2>
+
+<p>Create a slide presentation (~10 slides), with the description of your projects and your results. Also submit an iPython notebook with your code and technical details. The presentation should contain:</p>
+
+<ol>
+  <li><strong>The stated goal of the project.</strong> What are you trying to investigate? What are your hypotheses/expectations?</li>
+  <li><strong>A description of the data sources.</strong> What data do you use? How did you get the data - by downloading a CSV file, by using a web API, or by crawling?</li>
+  <li><strong>A description of the non-trivial manipulations that you performed on the data,</strong> if any.</li>
+  <li><strong>The database schema.</strong> How did you store the data?</li>
+  <li><strong>An explanation of the queries you ran against the data</strong> (no need to show the results), and the objective of each query.</li>
+  <li><strong>A presentation of the results of your data analysis,</strong> either as visualizations, or through some statistical tables.</li>
+</ol>
+
+<hr />
+
+<h2 id="final-checklist">Final checklist</h2>
+
+<p>The notebook should be used to generate a self-contained, replicable analysis. This means that:</p>
+<ol>
+  <li>If possible, the notebook should contain code for downloading the datasets you used.</li>
+  <li>If you build a SQL database, the notebook should contain code for creating the schema and uploading data in the database.</li>
+  <li>The analysis should run beginning to end with a press of the play button.</li>
+  <li>You should ensure that you eliminate all manual steps required in your analysis.</li>
+  <li>Ensure that you use Python and SQL in your analysis. You are free to use R in addition to (but not as a replacement of) Python/SQL.</li>
+  <li>Ensure that you use at least three SQL queries on your data, including GROUP BY and/or JOIN queries. Do not use Pandas as a replacement of the SQL queries. Pandas is extremely efficient in running SQL-like queries (in fact, it runs an in-memory SQL database as a backend) but our goal is to learn SQL.</li>
+  <li>Ensure that you have at least three plots or tables in your final writeup.</li>
+  <li>Include text in the notebook, so that your overall analysis is a readable report, not just code.</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!--<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>-->
+
+<div class="page__footer-copyright">&copy; 2018 </div>
+
+      </footer>
+    </div>
+
+    
+  <script src="http://people.stern.nyu.edu/khoffman/intro_programming_datasci/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

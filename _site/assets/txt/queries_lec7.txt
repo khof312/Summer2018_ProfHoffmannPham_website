@@ -1,0 +1,279 @@
+##########################################################
+# GETTING STARTED
+# show, use, describe
+##########################################################
+
+# List available databases
+SHOW DATABASES;
+
+# Choose which database to use
+USE imdb;
+
+# List available tables
+SHOW TABLES;
+
+# Describe what's in them
+DESCRIBE movies;
+
+##########################################################
+# WRITING OUR FIRST QUERY
+# select * from table
+##########################################################
+
+#######################
+USE imdb;
+DESCRIBE movies;
+#######################
+
+# Return all records in movies table
+# Return all records in directors table
+# Return all records in actors table
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# Return all records in Profiles table
+
+##########################################################
+# SELECTING SPECIFIC ATTRIBUTES
+# select var
+##########################################################
+
+#######################
+USE imdb;
+DESCRIBE actors;
+DESCRIBE movies;
+#######################
+
+# Return the first and last names of actors
+# Return year and ranking for each movie
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# Select name, sex, birthday from Profiles table
+# Select sex, politicalviews from Profiles table
+# Select status from Relationship table
+
+
+##########################################################
+# SELECTING SPECIFIC ATTRIBUTES AND ALIASING THEM
+# select var as alias
+# 
+# Note: doesn't change the attribute in the underlying table
+#       most helpful for creating clearer names
+##########################################################
+
+#######################
+USE imdb;
+DESCRIBE actors;
+#######################
+
+# Select actor id, first and last name from the actors table
+	# Rename:  id -> actor_id
+# Select year, rank from the actors table
+
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# Select sex, political views
+	# Rename: sex -> gender, politicalviews -> party_affil
+
+
+##########################################################
+# SELECTING VALUES WITH NO DUPLICATES
+# select distinct var
+##########################################################
+
+#######################
+USE imdb;
+DESCRIBE movies_genres;
+#######################
+
+# List the distinct Genres in the movies_genres table
+
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# Return the distinct Political Views from the Profiles table
+# Return the distinct Sex values from the Profiles table
+# Find all the distinct Statuses from the Relationship table
+# Find all the distinct Concentrations from Concentration table
+
+
+##########################################################
+# SORTING RESULTS
+# order by var asc/desc
+# limit n
+##########################################################
+
+#######################
+USE imdb;
+DESCRIBE movies;
+#######################
+
+# Find the top-10 ranked movies, most recent first
+# List all the distinct years of the movies, in descending order
+
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# Find all possible values for the “status” attribute in Profiles, eliminating duplicates
+# List the first 50 students that joined Facebook at NYU 
+	# (use the “MemberSince” attribute in Profiles table)
+
+##########################################################
+# Conditions
+# Equality  : attr = 'text', attr = number <- different than Python!
+# Inequality: <>, !=
+#             >, <, >=, <= 
+# In list   : attr IN(x1,x2,x3)
+#             attr NOT IN(x1,x2,x3...)
+# Conditions: cond1 AND cond2     <- both
+#             cond2 OR cond2      <- neither
+##########################################################
+
+
+#######################
+USE imdb;
+DESCRIBE movies;
+#######################
+
+
+# Find all movie titles with id less than 100.
+# Find all information about movies that were released before 1895 (excl)
+# Find all information about movies that were released before 1895 and after 2006 (inclusive)
+# Find all information about movies released between 1895 and 1898 (excl)
+# Find all information about actresses who are have first name Skyler
+# Find all information about female actresses who are have first name Skyler
+# Find the director IDs and the first and last names of directors with the last name Spielberg and Hitchcock
+# Find all genres of films and the corresponding probabilities 
+	# for the director ID that corresponds to Steven Spielberg (75380). 
+# Find the id of the movie Schindler's List
+# List all the roles for the movie with id 290070. Sort them alphabetically
+
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# Get the names and sex of all liberal students
+# Get the names, sex, and political views of liberal and very liberal students
+# Find all students who attended Stuyvesant High School
+# Find all possible values for the “Residence” attribute in Profiles, eliminating duplicates
+# Find all students living in Palladium
+
+
+##########################################################
+# Matching with LIKE
+# % = match any number of chars
+# _ = match one char
+##########################################################
+
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+# Find all students whose name starts with B
+# Find all students who attended Stuyvesant high school
+# Find all students who attended Stuyvesant high school in the 90s
+# Find all students living in Palladium (use LIKE)
+# Find all students living in the 7th floor of Palladium (use the “_” in LIKE)
+# Find all students with first names starting with K and last names starting with P
+
+
+
+##########################################################
+# Null values
+# var is NULL
+# var is not NULL
+##########################################################
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# Won't work
+# SELECT ProfileID, Name, Birthday
+# FROM Profiles
+# WHERE Birthday = NULL;
+
+
+# Find all students who don't have a birthday listed
+# Find all students who have an AIM name
+# Find all students who list their home state
+# Find unique values of home state
+# Try to find a few assorted values of New Jersey
+
+
+
+
+##########################################################
+# Joins
+# inner join
+##########################################################
+
+#######################
+USE imdb;
+DESCRIBE movies;
+#######################
+
+# List all the movies from year 2000
+# List all the movies from year 2000 and their genres
+# List all the Drama movies from year 2000
+# List all the Drama movies from year 2000 with ratings
+# List the top-50 Drama movies from year 2000, based on the ratings 
+# List the top-50 Drama movies from year 2000, based on the ratings 
+# Use id, name, and rank from movies, and rename them movie_id, movie_name, movie_rating
+	# Observe that no column from drama is needed
+# List all the movies where there is an actor with the role ‘James Bond’
+# List the actors who played ‘James Bond’
+# List the movies with ‘James Bond’
+# List the actors who played ‘James Bond’ and the name of the movie
+# List all the movies directed by Steven Spielberg
+	# Sort and limit results to 10
+    # Include only results from movies table
+# List all the movies where Brad Pitt is playing
+# Exclude the movies where he plays “himself”
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# List all the Single students born in 1985
+# List all the Single students who live in Palladium
+# List all the students born in 1985 who have “The Killers” as favorite Music
+# List all the Finance students who like the book “1984”
+
+
+##########################################################
+# Joins
+# outer join
+##########################################################
+
+#######################
+USE imdb;
+DESCRIBE movies;
+#######################
+
+# List all the movies without actors
+# List all the movies without an associated genre
+# List all the Students that have not listed a Concentration
+

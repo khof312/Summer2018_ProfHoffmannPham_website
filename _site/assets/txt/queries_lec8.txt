@@ -1,0 +1,148 @@
+##########################################################
+# Review
+##########################################################
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# Select sex, politicalviews from Profiles table
+# Select status from Relationship table
+# Find all the distinct Concentrations from Concentration table
+# Get the names and sex of all liberal students
+# Get the names, sex, and political views of liberal and very liberal students
+# Find all students with first names starting with K and last names starting with P
+
+##########################################################
+# (CONTINUED...) Joins
+# Inner join
+##########################################################
+#######################
+USE imdb;
+DESCRIBE movies;
+#######################
+# List all the movies where there is an actor with the role ‘James Bond’
+# List the actors who played ‘James Bond’
+# List the movies with ‘James Bond’
+# List the actors who played ‘James Bond’ and the name of the movie
+# List all the movies directed by Steven Spielberg
+# List all the movies where Brad Pitt is playing    
+# Exclude the movies where he plays “himself”
+
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+
+# List all the Single students born in 1985    
+# List all the Single students who live in Palladium    
+# List all the students born in 1985 who have “The Killers” as favorite Music
+# List all the Finance students who like the book “1984”
+
+##########################################################
+# (CONTINUED...) Joins
+# Outer join
+##########################################################
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+# List all the Students that have not listed a Concentration
+
+#######################
+USE imdb;
+DESCRIBE movies;
+#######################
+# List all the movies without an associated genre
+
+# Inner vs. outer join
+SELECT *
+FROM movies M
+	INNER JOIN roles R ON M.id = R.movie_id
+ORDER BY id;
+    # No missing roles
+
+SELECT *
+FROM movies M
+	LEFT OUTER JOIN roles R ON M.id = R.movie_id
+ORDER BY id;
+    # Missing roles
+
+
+
+##########################################################
+# Aggregation
+# Count, max, min, sum, avg, stddev
+##########################################################
+#######################
+USE imdb;
+DESCRIBE movies;
+#######################
+# Find the number of movies for each director
+# Sort directors by the number of movies they directed
+# Find the number of actors in each movie
+# Find the most popular genres (based on the number of movies)
+# Find the average rank of the movies in the database, per year of release
+	# Also include the count of movies, the count of ranked movies,
+	# the standard deviation, max, and min rank in the query above
+    
+#######################
+USE facebook;
+DESCRIBE Profiles;
+#######################
+# List the number of males and females
+# List the number of students for each political view
+# List the number of males and female students for each political view    
+# Find the 10 most popular TV Shows and Books
+# Find the number of students in various relationship statuses
+
+##########################################################
+# Having
+# Basic idea: apply conditions to aggregate
+##########################################################
+
+# WRONG!!!
+#SELECT TVShow, COUNT(*) AS likes
+#FROM FavoriteTVShows
+#WHERE likes > 10 # This is wrong
+#GROUP BY TVShow
+#ORDER BY likes DESC;
+
+SELECT TVShow, COUNT(*) AS likes
+FROM FavoriteTVShows
+GROUP BY TVShow
+HAVING likes>10 # This is a condition on the aggregate
+ORDER BY likes DESC;
+
+
+# List the number of students per each birth year 
+    # Use the YEAR(date) function to get the year value from a datetime column
+	# List only years that have at least 10 students 
+
+# Find the most popular majors (concentration), 
+	# e.g. those with more than 500 students
+
+
+##########################################################
+# More practice queries
+##########################################################
+#######################
+USE imdb;
+DESCRIBE movies;
+#######################
+# Find the movies with more than 100 actors
+# Find Drama movies with more than 100 actors
+# List all the movies from year 2000 and their average rating broken down by genre. Also list: 
+	# the maximum and minimum ratings
+	# the standard deviation of the ratings
+	# the number of rated movies and the total number of movies (COUNT(*) vs COUNT(attr))
+# List the average ratings for the movies broken down by genre
+# How many movies are missing a rating in 2000, by genre?
+# What is the most frequent role, 
+	# aside from an actor playing him/herself or a blank role (' ')? 
+# Compute the average rank for the movies directed by Steven Spielberg
+# List the movies of Brad Pitt
+	# Compute the average rank for his movies
+# List the genre of the movies where Sean Connery appears, and rank them in descending order by count.
+	# Exclude the movies where Sean Connery he plays himself
+# Compute the average rank for the movies of each actor and rank the actors in descending order based on that rank
